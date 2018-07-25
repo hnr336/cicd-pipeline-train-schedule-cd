@@ -13,7 +13,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-		echo 'Deployinh to stage'
+		echo 'Deployinh to staging'
                 withCredentials([usernamePassword(credentialsId: 'webserver_login', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
                     sshPublisher(
                         failOnError: true,
